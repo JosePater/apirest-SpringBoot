@@ -25,10 +25,13 @@ Campos de la tabla 'person' de la base de datos 'apirestdb':
 
 ### Endpoints
 
-| Método | Ruta          | Descripción                                      |
-|--------|---------------|--------------------------------------------------|
-| GET    | `/persons`    | Obtiene todas las personas de la tabla `person`. |
-| POST   | `/add-person` | Guarda una nueva persona en la base de datos.    |
+| Método | Ruta           | Descripción                                      |
+|--------|----------------|--------------------------------------------------|
+| GET    | `/persons`     | Obtiene todas las personas de la tabla `person`. |
+| GET    | `/person/{id}` | Busca a una persona por su Id.                   |
+| POST   | `/add-person`  | Guarda una nueva persona en la base de datos.    |
+| PUT    | `/person`      | Modifica los datos de una persona.               |
+| DELETE | `/person/{id}` | Elimina a una persona por su Id.                 |
 
 ##   
 

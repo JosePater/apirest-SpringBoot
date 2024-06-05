@@ -18,7 +18,7 @@ public class PersonService {
 
     // Guardar nueva persona
     public void createPersona(Person person) {
-        System.out.println("person: "+person);
+        System.out.println("Persona agregada: " + person);
         // .save(): permite crear como modificar
         personRepo.save(person);
     }
@@ -28,6 +28,19 @@ public class PersonService {
         return personRepo.findAll();
     }
 
+    // Buscar persona por su id
+    public Person getPersonById(Long id) {
+        return personRepo.findById(id).orElse(null);
+    }
 
-    // Pendiente crear métodos para buscar una persona por su id, eliminar y actualizar
+    // Eliminar persona
+    public void deletePerson(Long id) {
+        personRepo.deleteById(id);
+    }
+
+    // Modificar persona
+    public void updatePerson(Person person) {
+        personRepo.save(person);
+    }
+
 }
